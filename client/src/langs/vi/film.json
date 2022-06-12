@@ -2,5 +2,38 @@
   "name": "Tên phim",
   "example": {
     "name": "Doctor Strange 2"
+  },
+  "director": "Đạo diễn",
+  "actor": "Diễn viên",
+  "category": "Thể loại phim",
+  "language": "Ngôn ngữ",
+  "minutes": "Thời gian",
+  "time_publish": "Ngày phát hành",
+  "description": "Mô tả phim",
+  "example": {
+    "name": "Interstellar",
+    "director": "Someone",
+    "author": "Someone",
+    "category": "Science",
+    "language": "English",
+    "minutes": 180,
+    "time_publish": "29/06/2001",
+    "description": "Phim này hay quá"
+  },
+  "status": {
+    "waiting": "Sắp ra mắt",
+    "release": "Đang phát hành",
+    "closed": "Đóng phát hành",
+    "title": "Trạng thái"
+  },
+  "validate": {
+    "name_required": "Tên phim không được để trống",
+    "director_required": "Tên đạo diễn không được để trống",
+    "actor_required": "Tên diễn viên không được để trống",
+    "language_required": "Ngôn ngữ không được để trống",
+    "category_required": "Thể loại phim không được để trống",
+    "minutes_required": "Thời gian phim không được để trống",
+    "time_publish_required": "Ngày phát hành không được để trống",
+    "description_required": "Mô tả phim không được để trống"
   }
 }

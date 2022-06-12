@@ -15,6 +15,9 @@ exports.up = function (knex) {
     table.timestamp('time_publish');
     table.integer('admin_id');
     table.string('thumbnail');
+    table
+      .tinyint('status')
+      .comment('1:chuan bi ra mat, 2: dang phat hanh, 3: dong ');
     table.timestamps(true, true);
   });
 };

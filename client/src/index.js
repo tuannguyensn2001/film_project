@@ -4,11 +4,24 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '~/styles/global.scss';
 import './i18n';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     // <React.StrictMode>
-    <App />
+    <QueryClientProvider
+        client={
+            new QueryClient({
+                defaultOptions: {
+                    queries: {
+                        refetchOnWindowFocus: false,
+                    },
+                },
+            })
+        }
+    >
+        <App />
+    </QueryClientProvider>
     // </React.StrictMode>
 );
 

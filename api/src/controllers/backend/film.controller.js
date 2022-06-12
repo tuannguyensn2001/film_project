@@ -13,6 +13,7 @@ const create = async (req, res) => {
     language_raw: Joi.string().required(),
     time_publish: Joi.string().required(),
     thumbnail: Joi.string().required(),
+    status: Joi.number().required().min(1).max(3),
   });
 
   const { value, error } = schema.validate(req.body);
@@ -33,6 +34,15 @@ const create = async (req, res) => {
   });
 };
 
+const index = async (req, res) => {
+  const result = await filmRepository.all();
+  return res.json({
+    message: 'get success',
+    data: result,
+  });
+};
+
 module.exports = {
   create,
+  index,
 };

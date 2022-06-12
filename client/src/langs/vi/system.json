@@ -1,3 +1,9 @@
 {
-  "create": "Thêm mới"
+  "create": "Thêm mới",
+  "success": {
+    "create": "Thêm mới thành công"
+  },
+  "error": {
+    "create": "Thêm mới thất bại"
+  }
 }
