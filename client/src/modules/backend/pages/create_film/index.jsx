@@ -1,9 +1,7 @@
-import { useForm } from 'react-hook-form';
-import FormFilm from '~/modules/backend/components/form_film';
-import { Button, Form } from 'antd';
-import { useTranslation } from 'react-i18next';
-import useBackendTranslation from '~/hooks/useBackendTranslation';
-import { FormProvider } from 'react-hook-form';
+import {Button, Form} from 'antd';
+import {FormProvider, useForm} from 'react-hook-form';
+import {useTranslation} from 'react-i18next';
+import FormFilm from "~/modules/backend/components/form_film";
 
 function CreateFilm() {
     const methods = useForm();
@@ -12,7 +10,7 @@ function CreateFilm() {
         console.log(data);
     };
 
-    const { t } = useTranslation();
+    const {t} = useTranslation();
 
     return (
         <div>
@@ -21,7 +19,7 @@ function CreateFilm() {
                     layout={'vertical'}
                     onFinish={methods.handleSubmit(submit)}
                 >
-                    <FormFilm />
+                    <FormFilm/>
                     <div>
                         <Button htmlType={'submit'}>
                             {t('system.create')}

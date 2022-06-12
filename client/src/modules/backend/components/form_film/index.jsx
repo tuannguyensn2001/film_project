@@ -46,6 +46,17 @@ function FormFilm() {
                             )}
                         />
                     </Col>
+                    <Col span={12} >
+                        <Controller
+                            name={'actor_raw'}
+                            control={control}
+                            render={({field}) => (
+                                <Form.Item value={field.value} onChange={field.onChange} label={t("film.actor")} >
+                                    <Input placeholder={t('film.example.actor')} />
+                                </Form.Item>
+                            )}
+                        />
+                    </Col>
                 </Row>
             </Col>
             <Col span={8}>abs</Col>
