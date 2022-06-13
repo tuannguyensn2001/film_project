@@ -1,0 +1,11 @@
+.header {
+  @apply h-[75px] bg-white shadow;
+}
+
+.nav_item {
+  @apply flex flex-col justify-center mx-4 text-lg font-extrabold uppercase cursor-pointer;
+
+  &:hover {
+    color: #337ab7;
+  }
+}

@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import '~/styles/global.scss';
 import './i18n';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import 'swiper/css/bundle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

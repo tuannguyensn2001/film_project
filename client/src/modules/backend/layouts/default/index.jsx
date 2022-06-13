@@ -66,12 +66,7 @@ function DefaultLayout({ children, breadcrumbs }) {
 
     return (
         <Layout className={styles.layout}>
-            <Layout.Sider
-                collapsible
-                collapsed={collapsed}
-                onCollapse={toggle}
-                style={{ height: '100vh' }}
-            >
+            <Layout.Sider collapsible collapsed={collapsed} onCollapse={toggle}>
                 <div className="logo" />
                 <Menu
                     theme="dark"
@@ -81,7 +76,7 @@ function DefaultLayout({ children, breadcrumbs }) {
                     onClick={handleClickNav}
                 />
             </Layout.Sider>
-            <Layout>
+            <Layout style={{ minHeight: '100vh' }}>
                 <Layout.Header style={{ backgroundColor: '#ffffff' }}>
                     {React.createElement(iconToggle, {
                         onClick: toggle,

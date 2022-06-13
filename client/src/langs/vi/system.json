@@ -5,5 +5,8 @@
   },
   "error": {
     "create": "Thêm mới thất bại"
-  }
+  },
+  "updated_at": "Thời gian cập nhật gần nhất ",
+  "edit": "Sửa",
+  "delete": "Xóa"
 }

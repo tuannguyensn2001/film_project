@@ -4,7 +4,7 @@ const knex = require('knex')({
   version: '5.7',
   connection: {
     host: DATABASE.HOST,
-    pool: DATABASE.PORT,
+    port: DATABASE.PORT,
     user: DATABASE.USER,
     password: DATABASE.PASSWORD,
     database: DATABASE.NAME,
