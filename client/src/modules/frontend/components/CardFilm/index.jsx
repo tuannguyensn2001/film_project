@@ -1,4 +1,5 @@
 import styles from './style.module.scss';
+import { Button } from 'flowbite-react';
 
 function CardFilm() {
     return (
@@ -26,7 +27,9 @@ function CardFilm() {
                 </div>
             </div>
             <div className={'mt-5'}>
-                <button className={styles.buy_ticket}>mua ve</button>
+                <Button style={{ width: '100%' }} gradientDuoTone="greenToBlue">
+                    mua ve
+                </Button>
             </div>
         </div>
     );

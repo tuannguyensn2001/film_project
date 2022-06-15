@@ -12,6 +12,8 @@
     "axios": "^0.27.2",
     "daisyui": "^2.15.3",
     "dayjs": "^1.11.3",
+    "flowbite": "^1.4.7",
+    "flowbite-react": "^0.0.26",
     "i18next": "^21.8.9",
     "rc-picker": "^2.6.9",
     "react": "^18.1.0",
@@ -21,6 +23,7 @@
     "react-query": "^3.39.1",
     "react-router-dom": "6",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.5",
     "swiper": "^8.2.3",
     "web-vitals": "^2.1.4"
   },

@@ -1,13 +1,10 @@
 import { Col, Form, Input, InputNumber, Radio, Row } from 'antd';
-import { useFormContext } from 'react-hook-form';
-import { Controller } from 'react-hook-form';
+import { Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import styles from './style.module.scss';
 import DatePicker from '~/components/antd/DatePicker';
-import { useCallback, useMemo } from 'react';
+import { useCallback } from 'react';
 import dayjs from 'dayjs';
-
-console.log(dayjs());
 
 function FormFilm() {
     const { control, watch } = useFormContext();
@@ -35,8 +32,6 @@ function FormFilm() {
                             }) => (
                                 <Form.Item
                                     required
-                                    value={field.value}
-                                    onChange={field.onChange}
                                     label={t('film.name')}
                                     validateStatus={
                                         invalid ? 'error' : 'success'
@@ -44,6 +39,8 @@ function FormFilm() {
                                     help={error?.message}
                                 >
                                     <Input
+                                        value={field.value}
+                                        onChange={field.onChange}
                                         placeholder={t('film.example.name')}
                                     />
                                 </Form.Item>
@@ -63,8 +60,6 @@ function FormFilm() {
                             }) => (
                                 <Form.Item
                                     required
-                                    value={field.value}
-                                    onChange={field.onChange}
                                     label={t('film.director')}
                                     validateStatus={
                                         invalid ? 'error' : 'success'
@@ -72,6 +67,8 @@ function FormFilm() {
                                     help={error?.message}
                                 >
                                     <Input
+                                        value={field.value}
+                                        onChange={field.onChange}
                                         placeholder={t('film.example.director')}
                                     />
                                 </Form.Item>
@@ -90,8 +87,6 @@ function FormFilm() {
                                 fieldState: { error, invalid },
                             }) => (
                                 <Form.Item
-                                    value={field.value}
-                                    onChange={field.onChange}
                                     label={t('film.actor')}
                                     validateStatus={
                                         invalid ? 'error' : 'success'
@@ -100,6 +95,8 @@ function FormFilm() {
                                     required
                                 >
                                     <Input
+                                        value={field.value}
+                                        onChange={field.onChange}
                                         placeholder={t('film.example.actor')}
                                     />
                                 </Form.Item>
@@ -118,8 +115,6 @@ function FormFilm() {
                                 fieldState: { error, invalid },
                             }) => (
                                 <Form.Item
-                                    value={field.value}
-                                    onChange={field.onChange}
                                     label={t('film.category')}
                                     validateStatus={
                                         invalid ? 'error' : 'success'
@@ -128,6 +123,8 @@ function FormFilm() {
                                     required
                                 >
                                     <Input
+                                        value={field.value}
+                                        onChange={field.onChange}
                                         placeholder={t('film.example.category')}
                                     />
                                 </Form.Item>
@@ -146,8 +143,6 @@ function FormFilm() {
                                 fieldState: { error, invalid },
                             }) => (
                                 <Form.Item
-                                    value={field.value}
-                                    onChange={field.onChange}
                                     label={t('film.language')}
                                     validateStatus={
                                         invalid ? 'error' : 'success'
@@ -156,6 +151,8 @@ function FormFilm() {
                                     required
                                 >
                                     <Input
+                                        value={field.value}
+                                        onChange={field.onChange}
                                         placeholder={t('film.example.language')}
                                     />
                                 </Form.Item>
@@ -174,8 +171,6 @@ function FormFilm() {
                                 fieldState: { error, invalid },
                             }) => (
                                 <Form.Item
-                                    value={field.value}
-                                    onChange={field.onChange}
                                     label={t('film.minutes')}
                                     validateStatus={
                                         invalid ? 'error' : 'success'
@@ -184,6 +179,8 @@ function FormFilm() {
                                     required
                                 >
                                     <InputNumber
+                                        value={field.value}
+                                        onChange={field.onChange}
                                         className={styles.input_number}
                                         placeholder={t('film.example.minutes')}
                                     />
@@ -270,8 +267,6 @@ function FormFilm() {
                             }) => (
                                 <Form.Item
                                     required
-                                    value={field.value}
-                                    onChange={field.onChange}
                                     label={t('film.description')}
                                     validateStatus={
                                         invalid ? 'error' : 'success'
@@ -279,6 +274,8 @@ function FormFilm() {
                                     help={error?.message}
                                 >
                                     <Input.TextArea
+                                        value={field.value}
+                                        onChange={field.onChange}
                                         placeholder={t(
                                             'film.example.description'
                                         )}

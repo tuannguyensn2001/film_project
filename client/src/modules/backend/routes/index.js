@@ -7,6 +7,7 @@ const Dashboard = lazy(() => import('~/modules/backend/pages/dashboard'));
 const ListFilms = lazy(() => import('~/modules/backend/pages/list-films'));
 // const DefaultLayout = lazy(() => import('~/modules/backend/layouts/default'));
 const CreateFilm = lazy(() => import('~/modules/backend/pages/create_film'));
+const EditFilm = lazy(() => import('~/modules/backend/pages/edit_film'));
 
 const routes = [
     {
@@ -35,6 +36,20 @@ const routes = [
             },
             {
                 label: 'Them moi phim',
+            },
+        ],
+    },
+    {
+        path: '/admin/films/:id/edit',
+        component: EditFilm,
+        layout: DefaultLayout,
+        breadcrumbs: [
+            {
+                label: 'Quan ly phim',
+                href: '/admin/films',
+            },
+            {
+                label: 'Sua',
             },
         ],
     },

@@ -1,7 +1,7 @@
-import LayoutFrontend from '~/modules/frontend/layouts';
-import { Suspense, createElement } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createElement, Suspense } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import routes from '~/modules/frontend/routes';
+import '~/styles/tailwind.scss';
 
 function Frontend() {
     return (
