@@ -7,6 +7,7 @@ exports.up = function (knex) {
         table.integer('user_id');
         table.integer('schedule_id');
         table.string('position');
+        table.integer("money");
         table.tinyint('status');
         table.timestamps(true, true);
     });
