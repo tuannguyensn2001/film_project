@@ -15,3 +15,7 @@ exports.findById = (id) => {
 exports.update = (id, data) => {
     return knex('films').where('id', id).update(data);
 };
+
+exports.findByIds = (ids) => {
+    return knex('films').whereIn('id', ids);
+};

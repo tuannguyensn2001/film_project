@@ -8,6 +8,7 @@ const ListFilms = lazy(() => import('~/modules/backend/pages/list-films'));
 // const DefaultLayout = lazy(() => import('~/modules/backend/layouts/default'));
 const CreateFilm = lazy(() => import('~/modules/backend/pages/create_film'));
 const EditFilm = lazy(() => import('~/modules/backend/pages/edit_film'));
+const Schedules = lazy(() => import('~/modules/backend/pages/schedules'));
 
 const routes = [
     {
@@ -50,6 +51,16 @@ const routes = [
             },
             {
                 label: 'Sua',
+            },
+        ],
+    },
+    {
+        path: '/admin/schedules',
+        component: Schedules,
+        layout: DefaultLayout,
+        breadcrumbs: [
+            {
+                label: 'Quan ly lich chieu',
             },
         ],
     },

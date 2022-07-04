@@ -3,13 +3,13 @@
  * @returns {Knex.SchemaBuilder}
  */
 exports.up = function (knex) {
-  return knex.schema.createTable('schedules', (table) => {
-    table.increments('id');
-    table.integer('film_id');
-    table.timestamp('time');
-    table.tinyint('room');
-    table.timestamps(true, true);
-  });
+    return knex.schema.createTable('schedules', (table) => {
+        table.increments('id');
+        table.integer('film_id');
+        table.timestamp('time');
+        table.tinyint('room_id');
+        table.timestamps(true, true);
+    });
 };
 
 /**
@@ -17,5 +17,5 @@ exports.up = function (knex) {
  * @returns {Knex.SchemaBuilder}
  */
 exports.down = function (knex) {
-  return knex.schema.dropTableIfExists('schedules');
+    return knex.schema.dropTableIfExists('schedules');
 };

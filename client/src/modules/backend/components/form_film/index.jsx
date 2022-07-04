@@ -5,6 +5,7 @@ import styles from './style.module.scss';
 import DatePicker from '~/components/antd/DatePicker';
 import { useCallback } from 'react';
 import dayjs from 'dayjs';
+import UploadThumbnail from '~/modules/backend/components/UploadThumbnail';
 
 function FormFilm() {
     const { control, watch } = useFormContext();
@@ -288,12 +289,13 @@ function FormFilm() {
                 </Row>
             </Col>
             <Col span={8}>
-                <div className={styles.thumbnail_wrapper}>
+                {/* <div className={styles.thumbnail_wrapper}>
                     <img
                         src={watch('thumbnail')}
                         className={styles.thumbnail}
                     />
-                </div>
+                </div> */}
+                <UploadThumbnail />
             </Col>
         </Row>
     );

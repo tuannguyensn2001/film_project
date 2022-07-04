@@ -37,6 +37,12 @@ function DefaultLayout({ children, breadcrumbs }) {
                 icon: <UserOutlined />,
                 href: '/admin/films',
             },
+            {
+                key: 'schedule',
+                label: 'Quan ly lich chieu',
+                icon: <UserOutlined />,
+                href: '/admin/schedules',
+            },
         ];
     }, []);
 

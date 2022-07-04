@@ -2,6 +2,7 @@ const express = require('express');
 const interceptor = require('../interceptors/error');
 const filmController = require('../controllers/backend/film.controller');
 const scheduleController = require('../controllers/backend/schedule.controller');
+const roomController = require('../controllers/backend/room.controller');
 
 const router = express.Router();
 
@@ -12,5 +13,6 @@ router.put('/v1/films/:id', interceptor(filmController.update));
 
 router.post('/v1/schedules', interceptor(scheduleController.create));
 router.get('/v1/schedules/film/:id', interceptor(scheduleController.getByFilm));
+router.get('/v1/rooms', interceptor(roomController.index));
 
 module.exports = router;
